@@ -4,49 +4,115 @@
 /*****************/
 * {
     list-style: none;
+    margin: 0;
 }
 a {
     text-decoration: none;
     color: white;
 }
 
+/*************/
+/*****Font****/
+/*************/
+@font-face {
+    font-family: 'fluid_lighterregular';
+    src: url('../font/fluid_lighter-webfont.woff2') format('woff2'),
+         url('../font/fluid_lighter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*****************/
 /******NavBar*****/
 /*****************/
-nav ul li a   {
-    color: black;
-    margin-left: 10px;
+h1 {
+    font-family: 'fluid_lighterregular','Courier New', Courier, monospace;
+    color: white;
 }
-
+nav div ul li a   {
+    color: white;
+    margin-left: 40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+nav div ul li a:hover {
+    color: #1DB954;
+}
 nav {
+    background-color: rgba(0,0,0,0.9);
+    height: 100px;
+    z-index: 1;
+}
+nav div {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 35px;
     display: flex;
     justify-content: space-between;
+    position: fixed;  
+    z-index: 1;
 }
 
-
-
-nav ul {
+nav div ul {
     display: flex;
     flex-direction: row;
-   
-
+}
+hr {
+    margin-left: 4%;
 }
 
 /******************/
 /*Section centrale*/
 /******************/
-section {
+h2{
+    font-family:  'fluid_lighterregular','Courier New', Courier, monospace;
+    color:white;
+}
+h3 {
+    color: white;
+}
+button {
+   
+    background:  #1DB954;
+    border: none;
+    color:white;
+    border-radius: 20%;
+    height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+button:hover {
+    background: #1ED760;
+}
+.center {
+    position: relative;
     text-align: center;
+    background: linear-gradient(to bottom, rgba(153,6,143,1) 0%, rgba(255,146,10,1) 73%, rgba(255,146,10,1) 100%);
+    height: 400px;
+    padding-top: 10%;
+    line-height: 300%;
+    z-index: 0;
+    overflow: hidden;
 }
 
+.center img {
+    position: absolute;
+    right: 20%;
+    bottom: -30%;
+    z-index: -1;
+ 
+    width: 60%;
+}
 
 /*****************/
 /******Footer*****/
 /*****************/
 
-footer {
+footer section {
     color: white;
     background-color: black;
     display: flex;
     flex-direction: row;
+    height: 400px;
+    z-index: 1;
 }
